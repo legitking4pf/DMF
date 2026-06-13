@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/_next/image?url=https%3A%2F%2Fhv4w1qmfjrk8zaij.public.blob.vercel-storage.com%2Fimages+%283%29.jpeg&w=384&q=75',
     '/_next/image?url=https%3A%2F%2Fhv4w1qmfjrk8zaij.public.blob.vercel-storage.com%2Fportada-09-02-2024-111-juntos.jpg&w=384&q=75',
     '/_next/image?url=https%3A%2F%2Fhv4w1qmfjrk8zaij.public.blob.vercel-storage.com%2Fimages.jpeg&w=384&q=75',
-    '/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1504198266287-1659872e6590%3Fauto%3Dformat&fit=crop&q=75&w=640',
+    'https://images.unsplash.com/photo-1504198266287-1659872e6590?auto=format&fit=crop&q=75&w=640',
     '/_next/image?url=https%3A%2F%2Fwww.bancatlan.hn%2Fsala-de-prensa%2Fimg%2F2026-01-09-plaza-teknos-quimistan%2Fportada.jpg&w=256&q=75',
     '/_next/image?url=https%3A%2F%2Fcdn.prod.website-files.com%2F68363d5a1fb3537423263bff%2F6841f518e2c7e3dea8ea93a4_ceapi-2024-portada.jpg&w=256&q=75',
     '/_next/image?url=https%3A%2F%2Fcdn.prod.website-files.com%2F68363d5a1fb3537423263bff%2F683fcb25cfb6588ffd8a90be_Toma+ae%CC%81rea+AFP+Confia+-+El+Salvador-p-1080.jpg&w=256&q=75',
@@ -51,9 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFreq,
       priority: route.priority,
       ...(isRoot && {
-        images: rootImages.map(img => ({
-          url: img.startsWith('/_next') ? `${baseUrl}${img}` : decodeURIComponent(img.split('?url=')[1] || img)
-        }))
+        images: rootImages.map(img => 
+          img.startsWith('/_next') ? `${baseUrl}${img}` : decodeURIComponent(img.split('?url=')[1] || img)
+        )
       })
     }
   })
