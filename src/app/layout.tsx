@@ -77,22 +77,22 @@ export const metadata: Metadata = {
     },
     {
       name: "David Moro Fernandez",
-      url: "https://dmf-site.vercel.app"
+      url: "https://davidmoro.vercel.app"
     }
   ],
-  creators: [
+  creator: [
     "Grupo Financiero Atlántida", 
     "Banco Atlántida Honduras", 
     "Telefónica Empresas"
   ],
-  publishers: [
+  publisher: [
     "Grupo Financiero Atlántida", 
     "Banco Atlántida Honduras", 
     "Telefónica Empresas"
   ],
 
   // 3. URLs & Indexing
-  metadataBase: new URL("https://dmf-site.vercel.app"),
+  metadataBase: new URL("https://davidmoro.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: "https://dmf-site.vercel.app",
+      url: "https://davidmoro.vercel.app",
       siteName: "David Moro Fernandez",
       title: "David Moro Fernandez",
       description: "Chief Technology Officer at Banco Atlántida Honduras. Governing Member - Advisory Board at Grupo Financiero Atlántida.",

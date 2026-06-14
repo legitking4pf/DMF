@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function robots() {
-    var baseUrl = 'https://dmf-site.vercel.app';
+    var baseUrl = 'https://davidmoro.vercel.app';
     return {
         rules: {
             userAgent: '*',

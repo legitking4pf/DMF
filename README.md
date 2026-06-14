@@ -28,7 +28,7 @@ A high-performance web application designed to reflect the **Strategic Portfolio
 ### Installation
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/legitking4pf/DMF-site.git](https://github.com/legitking4pf/DMF-site.git)
+    git clone [https://github.com/legitking4pf/DMF.git](https://github.com/legitking4pf/DMF.git)
     ```
 2.  **Install dependencies:**
     ```bash

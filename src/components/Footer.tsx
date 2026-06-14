@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500">
           <div className="flex items-center gap-2 mb-2 md:mb-0">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span>Systems Nominal // DFJ Contact Core</span>
+            <span>Systems Nominal // DMF Contact Core</span>
           </div>
           <div className="flex items-center gap-6">
             <span>Tegucigalpa (HQ)</span>

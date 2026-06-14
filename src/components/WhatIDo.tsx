@@ -186,7 +186,7 @@ export default function StrategicEcosystems() {
                Global Reach // HND • ES • GT
              </p>
              <p className="text-[9px] uppercase tracking-[0.2em] text-gold">
-              DFJ 2026 Strategic Leadership
+              DMF 2026 Strategic Leadership
               </p>
            </div>
         </div>
