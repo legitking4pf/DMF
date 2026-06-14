@@ -7,7 +7,7 @@ import Link from 'next/link';
 const specializations = [
   {
     title: "Digital Integration",
-    desc: "Serving Chief Technology Officer of Banco Atlántida Honduras—a primary subsidiary of Grupo Financiero Atlántida (GFA)—David Jackson Fernandez orchestrates the architecture of secure digital banking ecosystems. His mandate encompasses leading large-scale fintech transformations across the Banco Atlántida network, subsidiaries, and affiliates. By prioritizing digital integration and institutional sustainability, he ensures a seamless, future-ready experience for both the bank and its global consumer base.",
+    desc: "Serving Chief Technology Officer of Banco Atlántida Honduras—a primary subsidiary of Grupo Financiero Atlántida (GFA)—David Moro Fernandez orchestrates the architecture of secure digital banking ecosystems. His mandate encompasses leading large-scale fintech transformations across the Banco Atlántida network, subsidiaries, and affiliates. By prioritizing digital integration and institutional sustainability, he ensures a seamless, future-ready experience for both the bank and its global consumer base.",
     icon: <Cpu className="w-5 h-5" />,
     role: "Chief Technology Officer",
     metric: "Digital Sovereignty",
@@ -17,7 +17,7 @@ const specializations = [
   },
   {
     title: "Executive Sovereignty",
-    desc: "In his capacity as Chief Administrative Officer, David Jackson Fernandez directs corporate governance and operational efficiency across the Atlantida Group framework. He orchestrates regional expansion by cultivating strategic investment partnerships, ensuring that the group’s administrative architecture supports long-term growth and institutional resilience",
+    desc: "In his capacity as Chief Administrative Officer, David Moro Fernandez directs corporate governance and operational efficiency across the Atlantida Group framework. He orchestrates regional expansion by cultivating strategic investment partnerships, ensuring that the group’s administrative architecture supports long-term growth and institutional resilience",
     icon: <ShieldCheck className="w-5 h-5" />,
     role: "Chief Administrative Officer",
     metric: "Operational Compliance",
@@ -75,13 +75,13 @@ export default function StrategicEcosystems() {
               Institutional <br /> <span className="text-gold font-bold uppercase">Ecosystems</span>
             </motion.h2>
             <p className="text-white/80 content-justify text-base md:text-xl font-light leading-relaxed max-w-xl">
-              David Jackson Fernandez has Aquired and hold leadership authority from management control and in ownership power in his current career life.  He has A comprehensive mandate driving <span className="text-white font-medium border-b border-gold/30">Digital Transfomation</span> in the banking and finance sector. And <span className="text-white font-medium border-b border-gold/30">Design Innovation</span> in the Luxury / E commerce sector. Having more significant achievements and strategic leadership majorly across the GFA / EBN Group
+              David Moro Fernandez has Aquired and hold leadership authority from management control and in ownership power in his current career life.  He has A comprehensive mandate driving <span className="text-white font-medium border-b border-gold/30">Digital Transfomation</span> in the banking and finance sector. And <span className="text-white font-medium border-b border-gold/30">Design Innovation</span> in the Luxury / E commerce sector. Having more significant achievements and strategic leadership majorly across the GFA / EBN Group
             </p>
           </motion.div>
 
           <div className="flex flex-col items-start lg:items-end border-l lg:border-l-0 lg:border-r border-gold/20 pl-6 lg:pl-0 lg:pr-6 pb-2">
              <span className="text-white font-bold tracking-[0.3em] text-sm mb-2 uppercase">
-              David Jackson Fernandez
+              David Moro Fernandez
             </span>
             <div className="flex items-center gap-3 text-gold-light text-[10px] font-mono tracking-widest uppercase">
               <Fingerprint size={12} /> CAO • CTO • FOUNDER

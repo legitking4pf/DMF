@@ -6,7 +6,7 @@ import { Fingerprint, Globe, X, Menu } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Hero", id: "hero" },
-  { label: "DJF Gallery", id: "djfgallery"},
+  { label: "DMF Gallery", id: "dmfgallery"},
   { label: "Dossier", id: "profile" },
   { label: "GfA Gallery", id: "gfagallery" },
   { label: "Portfolio", id: "whatIDo" },
@@ -61,11 +61,11 @@ useEffect(() => {
           {/* BRAND LOGO */}
           <div className="flex items-center gap-4">
             <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold select-none text-sm">
-              DJF
+              DMF
             </div>
             <div className="leading-tight  sm:block">
               <div className="text-sm tracking-widest text-white font-medium">
-                JACKSON <span className="text-gold-light">F.</span>
+                MORO <span className="text-gold-light">F.</span>
               </div>
               <div className="text-[9px] uppercase tracking-wider text-white/70">
                 Institutional Portfolio
@@ -128,11 +128,11 @@ useEffect(() => {
                 {/* Brand in Overlay */}
                 <div className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold text-sm">
-                    DJF
+                    DMF
                   </div>
                   <div className="leading-tight">
                     <div className="text-sm tracking-widest text-white font-medium">
-                      JACKSON <span className="text-gold-light">F.</span>
+                      MORO <span className="text-gold-light">F.</span>
                     </div>
                     <div className="text-[9px] uppercase tracking-wider text-white/40">
                       Menu Active

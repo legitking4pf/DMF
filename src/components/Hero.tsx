@@ -58,7 +58,7 @@ export default function Hero() {
             <p className="max-w-xl text-stone-600 md:text-lg leading-relaxed mb-12 font-light content-justify">
               The professional portfolio of{" "}
               <span className="font-semibold text-stone-900 border-b border-gold-dark/30">
-                David Jackson Fernandez
+                David Moro Fernandez
               </span>
               . Architecting institutional-grade digital governance and fintech solutions for the global stage.
             </p>

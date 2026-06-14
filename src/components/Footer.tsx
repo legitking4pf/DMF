@@ -57,7 +57,7 @@ export default function Footer() {
                 transition={{ duration: 0.8 }} 
                 className="text-2xl font-serif text-white tracking-tight mb-2"
               >
-                David Jackson Fernandez
+                David Moro Fernandez
               </motion.h2>
               <p className="text-xs text-[#c9a24a] uppercase tracking-[0.25em] font-bold">
                 CAO & CTO // Grupo Financiero Atlántida 
@@ -125,7 +125,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-xs text-gray-600">
             <span className="flex items-center gap-1">
-              <Copyright size={12} /> {currentYear} DJF Executive Office.
+              <Copyright size={12} /> {currentYear} DMF Executive Office.
             </span>
             <span className="hidden md:inline text-white/10">|</span>
             <span>All Rights Reserved.</span>

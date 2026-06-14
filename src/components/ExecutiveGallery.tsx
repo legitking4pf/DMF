@@ -99,7 +99,7 @@ export default function ExecutiveGallery() {
     }
   };
   return (
-    <section id="djfgallery" className="bg-bone py-24 md:py-40">
+    <section id="dmfgallery" className="bg-bone py-24 md:py-40">
       <div className="max-w-7xl mx-auto px-6">
         {/* Gallery Header to match your Profile style */}
         <div className="">
@@ -111,7 +111,7 @@ export default function ExecutiveGallery() {
           </div>
 
           <h1 className="text-4xl font-light text-obsidian mb-2 tracking-tight">
-            David Jackson Fernandez
+            David Moro Fernandez
           </h1>
           <p className="text-[12px] uppercase tracking-[0.3em] text-gold/80 mb-8 font-medium">
             Chief Administrative Officer
@@ -119,7 +119,7 @@ export default function ExecutiveGallery() {
 
           <div className="space-y-6 text-lg font-light leading-relaxed mb-8 text-ash content-justify" lang="en">
             <p>
-              As the Chief Administrative Officer, David Jackson Fernandez
+              As the Chief Administrative Officer, David Moro Fernandez
               stewards the institutional legacy and operational integrity
               of the organization. His leadership is defined by a commitment
               to structural clarity and the seamless integration of

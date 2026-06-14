@@ -12,14 +12,14 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 function sitemap() {
-    var baseUrl = 'https://djf-site.vercel.app';
+    var baseUrl = 'https://dmf-site.vercel.app';
     var lastModified = new Date('2026-06-14T01:43:05+01:00');
     var routes = [
-        { url: '', priority: 1.0, changeFreq: 'yearly' },
-        { url: '/dossier/digital-integration', priority: 0.8, changeFreq: 'yearly' },
-        { url: '/dossier/strategic-growth', priority: 0.8, changeFreq: 'yearly' },
-        { url: '/dashboard', priority: 1.0, changeFreq: 'yearly' },
-        { url: '/contact', priority: 1.0, changeFreq: 'yearly' },
+        { url: '', priority: 1.0, changeFreq: 'daily' },
+        { url: '/dossier/digital-integration', priority: 0.9, changeFreq: 'daily' },
+        { url: '/dossier/strategic-growth', priority: 0.9, changeFreq: 'daily' },
+        { url: '/dashboard', priority: 1.0, changeFreq: 'daily' },
+        { url: '/contact', priority: 1.0, changeFreq: 'daily' },
     ];
     var rootImages = [
         '/_next/image?url=https%3A%2F%2Fhv4w1qmfjrk8zaij.public.blob.vercel-storage.com%2Fsmal+screen+background&w=640&q=75',

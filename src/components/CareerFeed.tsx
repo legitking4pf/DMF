@@ -62,7 +62,7 @@ export default function ExecutiveLedger() {
           <div className="max-w-xs space-y-4">
             <p className="text-xs uppercase tracking-[0.2em] font-bold text-obsidian/40 content-justify">Executive Log // Leadership & Regional Milestones </p>
             <p className="text-lg content-justify font-light leading-relaxed text-ash">
-A centralized repository of David Jackson Fernandez’s leadership updates, management insights, and real-time synchronization of regional milestones. This feed tracks the high-velocity digital transformations and investment partnerships orchestrated across Grupo Financiero Atlántida and EBN Group subsidiaries, offering a direct view into the execution of the Group leadership exercises        </p>
+A centralized repository of David Moro Fernandez’s leadership updates, management insights, and real-time synchronization of regional milestones. This feed tracks the high-velocity digital transformations and investment partnerships orchestrated across Grupo Financiero Atlántida and EBN Group subsidiaries, offering a direct view into the execution of the Group leadership exercises        </p>
           </div>
         </div>
 

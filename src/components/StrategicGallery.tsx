@@ -47,7 +47,7 @@ export default function StrategicGallery() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-12">
               <Layers className="text-gold w-4 h-4" />
-              <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">DJF Asset Portfolio.</span>
+              <span className="text-gold font-bold tracking-[0.5em] text-[10px] uppercase">DMF Asset Portfolio.</span>
             </div>
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
@@ -57,7 +57,7 @@ export default function StrategicGallery() {
             > Company <br /> <span className="not-italic font-bold text-obsidian uppercase">Environments</span>
             </motion.h2>
             <p className="mt-12 text-ash text-lg max-w-xl font-light leading-relaxed">
-              A comprehensive visualization of David Jackson Fernandez, The Group and Subsidiaries physical and digital footprint (Images), mapped under DJF Oversight and Leadership Management.
+              A comprehensive visualization of David Moro Fernandez, The Group and Subsidiaries physical and digital footprint (Images), mapped under DMF Oversight and Leadership Management.
             </p>
           </div>
 

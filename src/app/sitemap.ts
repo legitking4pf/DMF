@@ -1,15 +1,15 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://djf-site.vercel.app'
+  const baseUrl = 'https://dmf-site.vercel.app'
   const lastModified = new Date('2026-06-14T01:43:05+01:00')
 
   const routes = [
-    { url: '', priority: 1.0, changeFreq: 'yearly' as const },
-    { url: '/dossier/digital-integration', priority: 0.8, changeFreq: 'yearly' as const },
-    { url: '/dossier/strategic-growth', priority: 0.8, changeFreq: 'yearly' as const },
-    { url: '/dashboard', priority: 1.0, changeFreq: 'yearly' as const },
-    { url: '/contact', priority: 1.0, changeFreq: 'yearly' as const },
+    { url: '', priority: 1.0, changeFreq: 'daily' as const },
+    { url: '/dossier/digital-integration', priority: 0.9, changeFreq: 'daily' as const },
+    { url: '/dossier/strategic-growth', priority: 0.9, changeFreq: 'daily' as const },
+    { url: '/dashboard', priority: 1.0, changeFreq: 'daily' as const },
+    { url: '/contact', priority: 1.0, changeFreq: 'daily' as const },
   ]
 
   const rootImages = [

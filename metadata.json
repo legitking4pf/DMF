@@ -1,26 +1,79 @@
 {
   "identity": {
-    "name": "David Jackson Fernandez",
-    "short_name": "DJF",
-    "site_name": "DJF Institutional",
-    "role": "CAO & CTO",
-    "organization": "Grupo Financiero Atlántida"
+    "name": "David Moro Fernandez",
+    "short_name": "DMF",
+    "site_name": "DMF Institutional",
+    "organizations": [
+      {
+        "company": "Grupo Financiero Atlántida",
+        "url": "https://grupofinancieroatlantida.com"
+      },
+      {
+        "company": "Banco Atlántida Honduras",
+        "url": "https://bancatlan.hn"
+      },
+      {
+        "company": "Telefonica Empresas",
+        "url": "https://www.telefonicaempresas.es/"
+      }
+    ],
+    "roles": [
+      {
+        "Chief Administrative Officer": "Grupo Financiero Atlántida"
+      },
+      {
+        "Chief Technology Officer": "Banco Atlántida Honduras"
+      },
+      {
+        "Head, Service Platforms & Voice Core Network": "Telefonica Empresas"
+      }
+    ]
   },
   "description": "Chief Technology Officer at Banco Atlántida Honduras. Governing Member - Advisory Board at Grupo Financiero Atlántida.",
   "seo": {
-    "display_title": "David Jackson Fernandez",
+    "display_title": "David Moro Fernandez",
     "keywords": [
-      "David Jackson Fernandez", "CAO", "CTO", "djf", "djf-site", "Fintech", "GFA", "KONCEPTO", "inversiones Atlantida", "South America", "seguros Atlantida", "bank investment", "entrepreneurship", "Spanish", "Honduras", "El salvador"
+      "David Moro Fernandez",
+      "CAO Grupo Financiero Atlántida",
+      "banco Atlantida",
+      "inversiones Atlantida",
+      "South America",
+      "seguros Atlantida",
+      "bank investment",
+      "entrepreneurship",
+      "Telefonica",
+      "Telefonica David moro",
+      "Telefonica empresas",
+      "communidad de madrid",
+      "madrid",
+      "Young Spanish Entreprenuers",
+      " European Business men",
+      "central america",
+      "atlantis bank",
+      "Atlantida board",
+      "Advisory board",
+      "Spanish",
+      "Honduras",
+      "El salvador",
+      "Grupo financiero Atlantida",
+      "gfa",
+      "CTO",
+      "Banco Atlántida",
+      "Digital Sovereignty",
+      "Fintech Core Migration",
+      "KONCEPTO Décor Founder",
+      "GFA Strategic Vision 2030",
+      "Wealth Acceleration Opportunity"
     ],
-    "canonical_url": "https://djf-site.vercel.app",
+    "canonical_url": "https://dmf-site.vercel.app",
     "robots": "index, follow"
   },
-  "social": {
-    "og_title": "David Jackson Fernandez",
+    "social": {
+    "og_title": "David Moro Fernandez",
     "og_type": "website",
-    "og_image": [ "https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/icon0.svg"
-    ]
+    "og_image": ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"]
   },
+
   "config": {
     "theme_color": "#A67C00",
     "last_updated": "2026-02-17"

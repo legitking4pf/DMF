@@ -34,7 +34,7 @@ export default function BoardCAODossier() {
         <div className="flex justify-between items-end">
           <div>
             <h1 className="text-huge font-display uppercase leading-[0.95] tracking-tight">
-              David Jackson Fernandez
+              David Moro Fernandez
             </h1>
             <p className="uppercase text-xs tracking-[0.3em] text-neutral-300 mt-2">
               Chief Administrative Officer · Board Governance Record

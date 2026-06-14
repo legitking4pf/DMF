@@ -57,7 +57,7 @@ var nextConfig = {
                         {
                             source: '/(.*)',
                             headers: [
-                                { key: 'Content-Security-Policy', value: cspHeader.replace(/\s{2,}/g, ' ').trim(), },
+                                { key: 'Content-Security-Policy', value: cspHeader.replace(/\s{2,}/g, ' ').trim() },
                                 { key: 'Strict-Transport-Security', value: stsHeader },
                                 { key: 'Referrer-Policy', value: referrerPolicy },
                                 { key: 'Permissions-Policy', value: permissionsPolicy },

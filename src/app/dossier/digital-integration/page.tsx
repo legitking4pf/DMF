@@ -93,7 +93,7 @@ export default function CTODossier() {
           </div>
 
           <div className="flex flex-col items-start md:items-end text-gold/40 font-mono text-[10px] tracking-[0.3em] uppercase space-y-2">
-            <div className="flex items-center gap-2"><Fingerprint size={20} /> AUTH: DJF-71-EXEC</div>
+            <div className="flex items-center gap-2"><Fingerprint size={20} /> AUTH: DMF-71-EXEC</div>
             <div className="flex items-center gap-2"><Globe size={20} /> REGION: HND-ES-GT</div>
           </div>
         </div>

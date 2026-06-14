@@ -60,9 +60,9 @@ export default function ExecutiveProfile() {
 
           <div className="lg:col-span-4 lg:text-right">
             <div className="space-y-2">
-              <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">David Jackson Fernandez</p>
+              <p className="text-obsidian font-bold text-2xl uppercase tracking-tighter">David Moro Fernandez</p>
               <div className="flex items-center lg:justify-end gap-3 text-gold/60 text-[11px] font-mono tracking-widest uppercase font-bold">
-                 <Fingerprint size={14} /> Ref: 71-DJF-GFA
+                 <Fingerprint size={14} /> Ref: 71-DMF-GFA
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function ExecutiveProfile() {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-ash text-lg font-light leading-relaxed content-justify">
-                <p> As a dual-mandate executive within the GFA ecosystem, David Jackson Fernandez maintains a singular focus: the absolute elimination of operational friction. Through high-precision Digital Integration and administrative rigor, he secures the velocity of wealth across regional borders, aligning every milestone with a Strategic Growth Network built for long-term sustainability.
+                <p> As a dual-mandate executive within the GFA ecosystem, David Moro Fernandez maintains a singular focus: the absolute elimination of operational friction. Through high-precision Digital Integration and administrative rigor, he secures the velocity of wealth across regional borders, aligning every milestone with a Strategic Growth Network built for long-term sustainability.
               </p>
               <p>This philosophy extends into his curation of the physical realm via KONCEPTO Décor. Here, he employs architectural essentialism to curate minimalist environments that reflect the structural integrity and high-end privacy of a well-governed financial system        </p>
               </div>
