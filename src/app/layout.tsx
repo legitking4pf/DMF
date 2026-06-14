@@ -70,26 +70,18 @@ export const metadata: Metadata = {
     "GFA Strategic Vision 2030",
     "Wealth Acceleration Opportunity"
   ],
-  authors: [
+    authors: [
     {
       name: "Grupo Financiero Atlántida",
       url: "https://grupofinancieroatlantida.com"
     },
     {
       name: "David Moro Fernandez",
-      url: "https://davidmoro.vercel.app"
+      url: "https://dmf-site.vercel.app"
     }
   ],
-  creator: [
-    "Grupo Financiero Atlántida", 
-    "Banco Atlántida Honduras", 
-    "Telefónica Empresas"
-  ],
-  publisher: [
-    "Grupo Financiero Atlántida", 
-    "Banco Atlántida Honduras", 
-    "Telefónica Empresas"
-  ],
+  creator: "Grupo Financiero Atlántida, Banco Atlántida Honduras, Telefónica Empresas",
+  publisher: "Grupo Financiero Atlántida, Banco Atlántida Honduras, Telefónica Empresas",
 
   // 3. URLs & Indexing
   metadataBase: new URL("https://davidmoro.vercel.app"),
