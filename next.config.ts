@@ -3,12 +3,8 @@ import { EventEmitter } from 'node:events'
 
 EventEmitter.defaultMaxListeners = 25
 
-// HSTS Header (1 year, all subdomains, preload)
 const stsHeader = `max-age=31536000; includeSubDomains; preload`
-
-// Content Security Policy
 const cspHeader = `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.public.blob.vercel-storage.com https://www.transparenttextures.com https://images.unsplash.com https://invatlan.hn https://cdn.prod.website-files.com https://www.bancatlan.hn; media-src 'self' blob: data: https://*.public.blob.vercel-storage.com; connect-src 'self' https://*.public.blob.vercel-storage.com; object-src 'self'; frame-ancestors 'none';`
-
 const referrerPolicy = 'no-referrer'
 const permissionsPolicy = "geolocation=(), camera=(), microphone=(), payment=(), fullscreen=(self)"
 const crossOriginOpenerPolicy = 'same-origin'
@@ -38,7 +34,7 @@ const nextConfig: NextConfig = {
   },
   
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,  DELETE THIS LINE
   
   images: {
     formats: ['image/avif', 'image/webp'],
