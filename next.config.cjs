@@ -1,4 +1,4 @@
-const { EventEmitter } = require('node:events');
+import { EventEmitter } from 'node:events';
 
 EventEmitter.defaultMaxListeners = 25;
 
