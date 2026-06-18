@@ -38,7 +38,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_events_1 = require("node:events");
 node_events_1.EventEmitter.defaultMaxListeners = 25;
-/** @type {import('next').NextConfig} */
 // HSTS Header (1 year, all subdomains, preload)
 var stsHeader = "max-age=31536000; includeSubDomains; preload";
 // Content Security Policy
@@ -47,7 +46,6 @@ var referrerPolicy = 'no-referrer';
 var permissionsPolicy = "geolocation=(), camera=(), microphone=(), payment=(), fullscreen=(self)";
 var crossOriginOpenerPolicy = 'same-origin';
 var crossOriginEmbedderPolicy = 'unsafe-none';
-// Extra clickjacking protection
 var xFrameOptions = 'DENY';
 var nextConfig = {
     headers: function () {
@@ -74,6 +72,7 @@ var nextConfig = {
         optimizePackageImports: ['lucide-react', 'framer-motion'],
     },
     reactStrictMode: true,
+    swcMinify: true,
     images: {
         formats: ['image/avif', 'image/webp'],
         minimumCacheTTL: 60,

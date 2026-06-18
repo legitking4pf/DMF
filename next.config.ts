@@ -1,25 +1,21 @@
-import { EventEmitter } from 'node:events';
+import type { NextConfig } from 'next'
+import { EventEmitter } from 'node:events'
 
-EventEmitter.defaultMaxListeners = 25;
-
-/** @type {import('next').NextConfig} */
+EventEmitter.defaultMaxListeners = 25
 
 // HSTS Header (1 year, all subdomains, preload)
-const stsHeader = `max-age=31536000; includeSubDomains; preload`;
+const stsHeader = `max-age=31536000; includeSubDomains; preload`
 
 // Content Security Policy
-const cspHeader = `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.public.blob.vercel-storage.com https://www.transparenttextures.com https://images.unsplash.com https://invatlan.hn https://cdn.prod.website-files.com https://www.bancatlan.hn; media-src 'self' blob: data: https://*.public.blob.vercel-storage.com; connect-src 'self' https://*.public.blob.vercel-storage.com; object-src 'self'; frame-ancestors 'none';`;
+const cspHeader = `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.public.blob.vercel-storage.com https://www.transparenttextures.com https://images.unsplash.com https://invatlan.hn https://cdn.prod.website-files.com https://www.bancatlan.hn; media-src 'self' blob: data: https://*.public.blob.vercel-storage.com; connect-src 'self' https://*.public.blob.vercel-storage.com; object-src 'self'; frame-ancestors 'none';`
 
-const referrerPolicy = 'no-referrer';
-const permissionsPolicy = "geolocation=(), camera=(), microphone=(), payment=(), fullscreen=(self)";
+const referrerPolicy = 'no-referrer'
+const permissionsPolicy = "geolocation=(), camera=(), microphone=(), payment=(), fullscreen=(self)"
+const crossOriginOpenerPolicy = 'same-origin'
+const crossOriginEmbedderPolicy = 'unsafe-none'
+const xFrameOptions = 'DENY'
 
-const crossOriginOpenerPolicy = 'same-origin';
-const crossOriginEmbedderPolicy = 'unsafe-none';
-
-// Extra clickjacking protection
-const xFrameOptions = 'DENY';
-
-const nextConfig = {
+const nextConfig: NextConfig = {
   async headers() {
     return [
       {
@@ -34,7 +30,7 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: xFrameOptions },
         ],
       },
-    ];
+    ]
   },
   
   experimental: {
@@ -42,6 +38,7 @@ const nextConfig = {
   },
   
   reactStrictMode: true,
+  swcMinify: true,
   
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -55,6 +52,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.transparenttextures.com' },
     ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
