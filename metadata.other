@@ -1,0 +1,6 @@
+export const metadata: Metadata = {
+  ...,
+  other: {
+    'link': 'preconnect https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com'
+  }
+}

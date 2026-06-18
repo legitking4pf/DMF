@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @theme {
   /* High-Contrast Executive Palette */
@@ -22,26 +19,22 @@
     color: var(--color-obsidian);
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-body);
-    
-    h1 {
-      font-size: revert;
-      margin-block: revert;
-    }
-    
-    .content-justify {
-      text-align: justify;
-      text-justify: inter-word;
-      hyphens: auto;
-    }
   }
   
-  h1,
-  h2,
-  h3,
-  .font-display {
+  h1, h2, h3, .font-display {
     font-family: var(--font-display);
-    /* Fixing the render-blocking typography delay */
-    font-display: swap;
+    /* font-display: swap removed - Next.js handles it via next/font */
+  }
+  
+  h1 {
+    font-size: revert;
+    margin-block: revert;
+  }
+  
+  .content-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
   }
 }
 
