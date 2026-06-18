@@ -8,8 +8,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-.git
-.env
+/.git/
 # testing
 /coverage
 
