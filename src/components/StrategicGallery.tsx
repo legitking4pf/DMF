@@ -101,7 +101,7 @@ export default function StrategicGallery() {
                   <motion.div 
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                     className="absolute inset-0 pointer-events-none"
-                    style={{ backgrounde: 'radial-gradient(circle, rgba(212,175,55,0.1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
+                    style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
                   >
                     <svg className="w-full h-full stroke-gold/30 stroke-[0.5] fill-none">
                       <line x1="0" y1="20%" x2="100%" y2="20%" />
