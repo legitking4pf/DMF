@@ -79,10 +79,11 @@ A centralized repository of David Moro Fernandez’s leadership updates, managem
             >
               {/* IMAGE ENGINE */}
               <div className="relative aspect-[16/10] overflow-hidden bg-obsidian">
-                <NextImage 
+                <NextImage
                   src={item.image} 
                   alt={item.title} 
                   fill
+                  priority
                   sizes="(max-width: 1024px) d100vw, 33vw"
                   className="object-cover grayscale-[50%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                 />

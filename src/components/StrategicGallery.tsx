@@ -89,6 +89,7 @@ export default function StrategicGallery() {
                 src={img.src} 
                 alt={img.title}
                 fill
+                priority
                 className={`object-cover transition-all duration-1000 group-hover:scale-110 
                   ${isBlueprint ? 'opacity-20 grayscale sepia' : 'opacity-90 grayscale-[0.3] group-hover:grayscale-0'}`}
                 sizes="(max-width: 1280px) 100vw, 50vw"
@@ -100,7 +101,7 @@ export default function StrategicGallery() {
                   <motion.div 
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                     className="absolute inset-0 pointer-events-none"
-                    style={{ backgroundImage: 'radial-gradient(circle, rgba(212,175,55,0.1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
+                    style={{ backgrounde: 'radial-gradient(circle, rgba(212,175,55,0.1) 1px, transparent 1px)', backgroundSize: '20px 20px' }}
                   >
                     <svg className="w-full h-full stroke-gold/30 stroke-[0.5] fill-none">
                       <line x1="0" y1="20%" x2="100%" y2="20%" />

@@ -107,6 +107,7 @@ export default function StrategicEcosystems() {
                     src={item.texture} 
                     alt="Material Texture" 
                     fill 
+                    priority
                     className="object-cover"
                   />
                 </div>

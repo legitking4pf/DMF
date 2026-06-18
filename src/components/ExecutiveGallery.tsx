@@ -146,6 +146,7 @@ export default function ExecutiveGallery() {
               <NextImage
                 src={item.src}
                 alt={`Executive Archive ${item.id}`}
+                priority
                 className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110
                 ${item.type === 'wide' ? 'object-top': 'object-center'}`}
                 loading="lazy"

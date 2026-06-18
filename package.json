@@ -36,6 +36,7 @@
   ],
   "version": "2.0.1",
   "private": true,
+  "type": "module"
   "authors": [
     "Grupo Financiero Atlantida",
     "David Moro Fernandez"
