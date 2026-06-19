@@ -10,9 +10,7 @@ import {
 import {
   RiskPanel
 } from "@/components/dashboard/RiskPanel";
-import {
-  PerformanceChartWrapper
-} from "@/components/dashboard/PerformanceChartWrapper";
+import PerformanceChartWrapper from "@/components/dashboard/PerformanceChartWrapper";
 import {
   TechnicalDossier
 } from "@/components/dashboard/TechnicalDossier";
