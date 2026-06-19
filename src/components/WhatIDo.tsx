@@ -1,9 +1,21 @@
 "use client";
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import { Cpu, ShieldCheck, Palette, Globe, ArrowUpRight, Fingerprint } from 'lucide-react';
 import NextImage from 'next/image';
 import Link from 'next/link';
+
+// Dynamically import motion components to prevent blocking the initial page load
+const MotionDiv = dynamic(
+  () => import('framer-motion').then((mod) => mod.motion.div), 
+  { ssr: true }
+);
+const MotionH2 = dynamic(
+  () => import('framer-motion').then((mod) => mod.motion.h2), 
+  { ssr: true }
+);
+
 const specializations = [
   {
     title: "Digital Integration",
@@ -51,14 +63,14 @@ const specializations = [
   }
 ];
 
-export default function StrategicEcosystems() {
+const EcosystemContent = () => {
   return (
     <section id="whatIDo" className="py-24 md:py-40 bg-obsidian text-bone overflow-hidden selection:bg-gold/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* EXECUTIVE HEADER: THE COMMAND CENTER */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-32 gap-12">
-          <motion.div 
+          <MotionDiv 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -68,16 +80,23 @@ export default function StrategicEcosystems() {
             <div className="flex items-center gap-4 mb-12">
               <div className="h-[1px] w-12 bg-gold-dark" />
               <span className="text-gold-light font-bold tracking-[0.6em] text-[10px] uppercase">
-              DAVID's Leadership Assets
+                DAVID's Leadership Assets
               </span>
             </div>
-            <motion.h2 initial = { { opacity: 0, y: 30 } } whileInView = { { opacity: 1, y: 0 } }transition = { { duration: 0.8 }} className="text-3xl md:text-6xl font-display italic font-serif tracking-tighter leading-[] mb-12">
+            
+            <MotionH2 
+              initial={{ opacity: 0, y: 30 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
+              className="text-3xl md:text-6xl font-display italic font-serif tracking-tighter leading-none mb-12"
+            >
               Institutional <br /> <span className="text-gold font-bold uppercase">Ecosystems</span>
-            </motion.h2>
-            <p className="text-white/80 content-justify text-base md:text-xl font-light leading-relaxed max-w-xl">
-              David Moro Fernandez has Aquired and hold leadership authority from management control and in ownership power in his current career life.  He has A comprehensive mandate driving <span className="text-white font-medium border-b border-gold/30">Digital Transfomation</span> in the banking and finance sector. And <span className="text-white font-medium border-b border-gold/30">Design Innovation</span> in the Luxury / E commerce sector. Having more significant achievements and strategic leadership majorly across the GFA / EBN Group
+            </MotionH2>
+            
+            <p className="text-white/80 text-justify text-base md:text-xl font-light leading-relaxed max-w-xl">
+              David Moro Fernandez has Aquired and hold leadership authority from management control and in ownership power in his current career life. He has A comprehensive mandate driving <span className="text-white font-medium border-b border-gold/30">Digital Transfomation</span> in the banking and finance sector. And <span className="text-white font-medium border-b border-gold/30">Design Innovation</span> in the Luxury / E commerce sector. Having more significant achievements and strategic leadership majorly across the GFA / EBN Group
             </p>
-          </motion.div>
+          </MotionDiv>
 
           <div className="flex flex-col items-start lg:items-end border-l lg:border-l-0 lg:border-r border-gold/20 pl-6 lg:pl-0 lg:pr-6 pb-2">
              <span className="text-white font-bold tracking-[0.3em] text-sm mb-2 uppercase">
@@ -92,7 +111,7 @@ export default function StrategicEcosystems() {
         {/* THE ARCHITECTURAL MATRIX */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
           {specializations.map((item, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -107,8 +126,8 @@ export default function StrategicEcosystems() {
                     src={item.texture} 
                     alt="Material Texture" 
                     fill 
-                    priority
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               )}
@@ -135,7 +154,7 @@ export default function StrategicEcosystems() {
                 </h3>
                 
                 {/* ACCESSIBILITY: High Contrast descriptions */}
-                <p className="text-base content-justify md:text-lg text-white/70 font-light leading-relaxed mb-10 max-w-sm group-hover:text-white transition-colors">
+                <p className="text-base text-justify md:text-lg text-white/70 font-light leading-relaxed mb-10 max-w-sm group-hover:text-white transition-colors">
                   {item.desc}
                 </p>
               </div>
@@ -143,25 +162,27 @@ export default function StrategicEcosystems() {
               {/* CARD BOTTOM: ROLE & ACTION */}
               <div className="relative z-10 space-y-12">
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-black mb-4">Functional Mandate</span>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-black mb-4">
+                    Functional Mandate
+                  </span>
                   <span className="text-xl font-medium tracking-wide text-white border-l-2 border-gold/40 pl-5">
                     {item.role}
                   </span>
                 </div>
 
                 <Link 
-  href={item.link} 
-  className={`inline-flex items-center gap-6 text-[11px] uppercase tracking-[0.5em] font-black transition-all duration-500 group/btn
-    ${item.isHighlight 
-      ? "bg-gold text-obsidian px-10 py-5 shadow-2xl shadow-gold/10 hover:shadow-gold/30" 
-      : "text-white hover:text-gold"}`}
->
-  {item.cta} 
-  <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2 transition-transform" />
-</Link>
+                  href={item.link} 
+                  className={`inline-flex items-center gap-6 text-[11px] uppercase tracking-[0.5em] font-black transition-all duration-500 group/btn
+                    ${item.isHighlight 
+                      ? "bg-gold text-obsidian px-10 py-5 shadow-2xl shadow-gold/10 hover:shadow-gold/30" 
+                      : "text-white hover:text-gold"}`}
+                >
+                  {item.cta} 
+                  <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2 transition-transform" />
+                </Link>
 
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 
@@ -169,7 +190,9 @@ export default function StrategicEcosystems() {
         <div className="mt-24 flex flex-col md:flex-row items-center justify-between border-t border-white/5 pt-12 gap-10">
            <div className="flex items-center gap-10">
               <div className="flex flex-col">
-                <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 mb-2 font-bold">Security Protocols</span>
+                <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 mb-2 font-bold">
+                  Security Protocols
+                </span>
                 <span className="text-[11px] font-mono text-gold flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" /> 
                   Unified Command Active
@@ -177,8 +200,12 @@ export default function StrategicEcosystems() {
               </div>
               <div className="hidden md:block w-[1px] h-10 bg-white/10" />
               <div className="flex flex-col">
-                <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 mb-2 font-bold">Philosophical Core</span>
-                <span className="text-[11px] font-mono text-white italic">Architectural Essentialism</span>
+                <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 mb-2 font-bold">
+                  Philosophical Core
+                </span>
+                <span className="text-[11px] font-mono text-white italic">
+                  Architectural Essentialism
+                </span>
               </div>
            </div>
            
@@ -187,11 +214,17 @@ export default function StrategicEcosystems() {
                Global Reach // HND • ES • GT
              </p>
              <p className="text-[9px] uppercase tracking-[0.2em] text-gold">
-              DMF 2026 Strategic Leadership
-              </p>
+               DMF 2026 Strategic Leadership
+             </p>
            </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+// Export the component wrapped in Next.js dynamic loader
+export default dynamic(() => Promise.resolve(EcosystemContent), {
+  ssr: false,
+  loading: () => <div className="h-[800px] w-full bg-obsidian animate-pulse" />
+});

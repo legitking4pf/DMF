@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import {
+  DynamicMotionDiv as MotionDiv
+} from '@/components/motion/DynamicMotion';
 import { 
   Cpu, 
   ShieldAlert, 
@@ -11,7 +13,6 @@ import {
   ArrowRight,
   Fingerprint
 } from 'lucide-react';
-
 const technicalMandates = [
   {
     id: "CORE-01",
@@ -38,7 +39,6 @@ const technicalMandates = [
     status: "Optimized"
   }
 ];
-
 // Type-safe Variants for Next.js 16.1.1
 const containerVars = {
   hidden: { opacity: 0 },
@@ -47,7 +47,6 @@ const containerVars = {
     transition: { staggerChildren: 0.15, delayChildren: 0.3 }
   }
 };
-
 const itemVars = {
   hidden: { opacity: 0, y: 20 },
   show: { 
@@ -59,7 +58,6 @@ const itemVars = {
     } 
   }
 };
-
 export default function CTODossier() {
   return (
     <section className="relative py-32 bg-obsidian text-bone overflow-hidden">
@@ -99,7 +97,7 @@ export default function CTODossier() {
         </div>
 
         {/* THE SYSTEM MATRIX */}
-        <motion.div 
+        <MotionDiv 
           variants={containerVars}
           initial="hidden"
           whileInView="show"
@@ -107,7 +105,7 @@ export default function CTODossier() {
           className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-white/10 border border-white/10"
         >
           {technicalMandates.map((item) => (
-            <motion.div
+            <MotionDiv
               key={item.id}
               variants={itemVars}
               className="group relative p-10 md:p-16 bg-obsidian hover:bg-white/[0.02] transition-all duration-700 overflow-hidden"
@@ -146,9 +144,9 @@ export default function CTODossier() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
-        </motion.div>
+        </MotionDiv>
 
         {/* ACTION: Strategic Connectivity */}
         <div className="mt-20 flex flex-col md:flex-row items-center justify-between gap-12 border-t border-white/5 pt-12">

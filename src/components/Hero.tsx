@@ -41,8 +41,7 @@ export default function Hero() {
           >
             {/* High-End Label */}
             <div className="mb-8">
-              <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-gold
-              font-medium border-l-2 border-gold pl-4 py-1">
+              <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-gold font-medium border-l-2 border-gold pl-4 py-1">
                 Institutional Mandate
               </span>
             </div>
@@ -55,7 +54,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtext with better typography */}
-            <p className="max-w-xl text-stone-600 md:text-lg leading-relaxed mb-12 font-light content-justify">
+            <p className="max-w-xl text-stone-600 md:text-lg leading-relaxed mb-12 font-light text-justify">
               The professional portfolio of{" "}
               <span className="font-semibold text-stone-900 border-b border-gold-dark/30">
                 David Moro Fernandez

@@ -1,34 +1,43 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import {
+  useState,
+  useEffect
+} from 'react';
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
+// REMOVED: import { motion } from 'framer-motion';
+import {
+  DynamicMotionDiv as MotionDiv
+} from '@/components/motion/DynamicMotion';
 
 // Components
 import ExecutiveDoctrine from "@/components/ExecutiveDoctrine";
-import { doctrines } from "@/data/doctrines.board";
+import {
+  doctrines
+} from "@/data/doctrines.board";
 
 // Dynamic Timeline
-const Timeline = dynamic(() => import("@/components/ExecutiveTimeline"), { 
+const Timeline = dynamic(() => import("@/components/ExecutiveTimeline"), {
   ssr: false,
   loading: () => <div className="h-96 w-full bg-neutral-50 animate-pulse rounded-lg" />
 });
 
 export default function BoardCAODossier() {
-  const [year, setYear] = useState<number | null>(null);
+  const [year,
+    setYear] = useState < number | null > (null);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
 
   return (
-    <motion.main 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+    <MotionDiv
+      initial={ { opacity: 0, y: 20 }}
+      animate={ { opacity: 1, y: 0 }}
+      transition={ { duration: 0.8, ease: "easeOut" }}
       className="max-w-6xl mx-auto px-6 py-20 space-y-24"
       id="dossier"
-    >
+      >
       {/* Executive Header */}
       <header className="border-b border-neutral-100 pb-12 space-y-4">
         <div className="flex justify-between items-end">
@@ -46,15 +55,15 @@ export default function BoardCAODossier() {
       {/* Board Doctrines */}
       <section className="grid grid-cols-1 gap-24">
         {doctrines.map((d, index) => (
-          <motion.div
+          <MotionDiv
             key={d.title}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-          >
+            initial={ { opacity: 0 }}
+            whileInView={ { opacity: 1 }}
+            viewport={ { once: true }}
+            transition={ { delay: index * 0.1 }}
+            >
             <ExecutiveDoctrine {...d} />
-          </motion.div>
+          </MotionDiv>
         ))}
       </section>
 
@@ -65,12 +74,6 @@ export default function BoardCAODossier() {
             Evolutionary Timeline
           </h2>
           <Timeline />
-        </div>
-
-        <div className="space-y-2">
-          <h2 className="text-sm uppercase tracking-widest text-neutral-400">
-            Global Asset Footprint
-          </h2>
         </div>
       </section>
 
@@ -124,6 +127,6 @@ export default function BoardCAODossier() {
           </div>
         </div>
       </footer>
-    </motion.main>
+    </MotionDiv>
   );
 }

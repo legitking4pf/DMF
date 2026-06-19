@@ -1,6 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { DynamicMotionDiv as MotionDiv } from '@/components/motion/DynamicMotion';
+
+
 import type { Variants } from "framer-motion";
 import {
   ShieldCheck,
@@ -91,13 +94,13 @@ export default function ExecutiveContact() {
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20 pt-28">
-          <motion.div
+          <MotionDiv
             variants={containerVars}
             initial="hidden"
             animate="show"
             className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end"
           >
-            <motion.div variants={itemVars} className="lg:col-span-8">
+            <MotionDiv variants={itemVars} className="lg:col-span-8">
               <div className="flex items-center gap-4 mb-8">
                 <Fingerprint className="w-4 h-4 text-gold-light" />
                 <span className="text-gold-light text-[10px] font-black tracking-[0.45em] uppercase">
@@ -117,9 +120,9 @@ export default function ExecutiveContact() {
                 Encrypted institutional access for CAO & CTO-level engagements.
                 Briefings only. Vetted. Actionable.
               </p>
-            </motion.div>
+            </MotionDiv>
 
-            <motion.div
+            <MotionDiv
               variants={itemVars}
               className="lg:col-span-4 lg:text-right"
             >
@@ -130,22 +133,22 @@ export default function ExecutiveContact() {
                 <br />
                 Technology Sovereignty
               </p>
-            </motion.div>
-          </motion.div>
+            </MotionDiv>
+          </MotionDiv>
         </div>
       </section>
 
       {/* === BODY === */}
       <section className="max-w-7xl mx-auto px-6 lg:px-20 py-24 grid grid-cols-1 lg:grid-cols-12 gap-20 bg-[#FBFBF9] text-obsidian">
         {/* LEFT: PILLARS */}
-        <motion.div
+        <MotionDiv
           variants={containerVars}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           className="lg:col-span-5 space-y-14"
         >
-          <motion.div variants={itemVars}>
+          <MotionDiv variants={itemVars}>
             <div className="flex items-center gap-5 mb-4">
               <div className="w-12 h-12 flex items-center justify-center border border-gold-dark text-gold-light rounded-md">
                 <Landmark size={18} />
@@ -158,9 +161,9 @@ export default function ExecutiveContact() {
               Capital deployment strategies designed to scale institutional
               assets with jurisdictional awareness and sovereign tech control.
             </p>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div variants={itemVars}>
+          <MotionDiv variants={itemVars}>
             <div className="flex items-center gap-5 mb-4">
               <div className="w-12 h-12 flex items-center justify-center border border-gold-dark text-gold-light rounded-md">
                 <Zap size={18} />
@@ -173,18 +176,18 @@ export default function ExecutiveContact() {
               Zero-trust infrastructure, fintech modernization, and interoperable
               executive systems across the Atlántida ecosystem.
             </p>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div variants={itemVars} className="pt-6">
+          <MotionDiv variants={itemVars} className="pt-6">
             <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-ash font-mono">
               <Globe size={14} className="text-gold-light" />
               Tegucigalpa • HND — ES — GT
             </div>
-          </motion.div>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
 
         {/* RIGHT: FORM */}
-        <motion.div
+        <MotionDiv
           variants={containerVars}
           initial="hidden"
           whileInView="show"
@@ -209,7 +212,7 @@ export default function ExecutiveContact() {
 
             <AnimatePresence mode="wait">
               {succeeded ? (
-                <motion.div
+                <MotionDiv
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
@@ -231,7 +234,7 @@ export default function ExecutiveContact() {
                   >
                     New Transmission <ArrowRight size={14} />
                   </button>
-                </motion.div>
+                </MotionDiv>
               ) : (
                 <form
                   onSubmit={submitForm}
@@ -313,7 +316,7 @@ export default function ExecutiveContact() {
               )}
             </AnimatePresence>
           </div>
-        </motion.div>
+        </MotionDiv>
       </section>
 
       {/* FOOTER */}

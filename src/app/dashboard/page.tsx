@@ -1,17 +1,37 @@
 "use client";
 
 import React from "react";
-import { performanceData } from '@/data/chartData';
-import { MetricCard } from "@/components/dashboard/MetricCard";
-import { RiskPanel } from "@/components/dashboard/RiskPanel";
-import { PerformanceChart } from "@/components/dashboard/PerformanceChart";
-import { TechnicalDossier } from "@/components/dashboard/TechnicalDossier";
-import { gfaInstitutionalData } from "@/types/dashboard";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react"; //
+import {
+  performanceData
+} from '@/data/chartData';
+import {
+  MetricCard
+} from "@/components/dashboard/MetricCard";
+import {
+  RiskPanel
+} from "@/components/dashboard/RiskPanel";
+import {
+  PerformanceChartWrapper
+} from "@/components/dashboard/PerformanceChartWrapper";
+import {
+  TechnicalDossier
+} from "@/components/dashboard/TechnicalDossier";
+import {
+  gfaInstitutionalData
+} from "@/types/dashboard";
+import {
+  DynamicMotionDiv as MotionDiv
+} from '@/components/motion/DynamicMotion';
+import {
+  ArrowUpRight
+} from "lucide-react"; //
 
 export default function DashboardPage() {
-const { netGain, groupTotalAssets, groupRevenue } = gfaInstitutionalData;  
+  const {
+    netGain,
+    groupTotalAssets,
+    groupRevenue
+  } = gfaInstitutionalData;
   return (
     <main className="min-h-screen bg-[#050505] text-white p-4 md:p-12 font-sans">
       <div className="max-w-7xl mx-auto space-y-10">
@@ -99,115 +119,115 @@ const { netGain, groupTotalAssets, groupRevenue } = gfaInstitutionalData;
         </div>
 
         {/* ================= ZONE 1: METRICS ================= */}
-{(() => {
-  // 1. Extract latest data for tallying
-  const currentAssetValue = performanceData[performanceData.length - 1].gfaAssets;
-  const previousAssetValue = performanceData[performanceData.length - 2].gfaAssets;
-  
-  // 2. Calculate dynamic growth percentage
-  const assetGrowth = (((currentAssetValue - previousAssetValue) / previousAssetValue) * 100).toFixed(1) + '%';
-  
-  // 3. Sync gfaInstitutionalData with the chart's "Current" point
-  const totalAssetsInBytes = currentAssetValue * 1000000000;
+        {(() => {
+          // 1. Extract latest data for tallying
+          const currentAssetValue = performanceData[performanceData.length - 1].gfaAssets;
+          const previousAssetValue = performanceData[performanceData.length - 2].gfaAssets;
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-      className="grid grid-cols-1 md:grid-cols-3 gap-4"
-    >
-      <MetricCard
-        label="GFA Group Assets"
-        value={totalAssetsInBytes}
-        trend={assetGrowth}
-      />
+          // 2. Calculate dynamic growth percentage
+          const assetGrowth = (((currentAssetValue - previousAssetValue) / previousAssetValue) * 100).toFixed(1) + '%';
 
-      <MetricCard
-        label="Annual Group Revenue"
-        value={gfaInstitutionalData.groupRevenue}
-        trend="+1.2%" 
-      />
+          // 3. Sync gfaInstitutionalData with the chart's "Current" point
+          const totalAssetsInBytes = currentAssetValue * 1000000000;
 
-      <MetricCard
-        label="Net Performance (Yield)"
-        value={netGain}
-        trend="+7.5%"
-      />
-    </motion.div>
-  );
-})()}
+          return (
+            <MotionDiv
+              initial={ { opacity: 0, y: 10 }}
+              animate={ { opacity: 1, y: 0 }}
+              transition={ { delay: 0.2 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4"
+              >
+              <MetricCard
+                label="GFA Group Assets"
+                value={totalAssetsInBytes}
+                trend={assetGrowth}
+                />
+
+              <MetricCard
+                label="Annual Group Revenue"
+                value={gfaInstitutionalData.groupRevenue}
+                trend="+1.2%"
+                />
+
+              <MetricCard
+                label="Net Performance (Yield)"
+                value={netGain}
+                trend="+7.5%"
+                />
+            </MotionDiv>
+          );
+        })()}
 
         {/* ================= CENTER GRID ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
           {/* CHART */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
+          <MotionDiv
+            initial={ { opacity: 0, x: -20 }}
+            animate={ { opacity: 1, x: 0 }}
+            transition={ { delay: 0.4 }}
             className="lg:col-span-2 border border-white/10 bg-[#050505] overflow-hidden"
-          >
-            <PerformanceChart />
-          </motion.div>
-{/* ================= INSTITUTIONAL PROOF SECTION ================= */}
-<motion.div
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  className="lg:col-span-1"
->
-  <div className="h-full p-8 bg-[#0A0A0A] border border-white/10 rounded-sm flex flex-col justify-between">
-    <div>
-      <div className="flex items-center gap-2 mb-6">
-        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-        <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-zinc-500">
-          Source Verification
-        </span>
-      </div>
+            >
+            <PerformanceChartWrapper />
+          </MotionDiv>
+          {/* ================= INSTITUTIONAL PROOF SECTION ================= */}
+          <MotionDiv
+            initial={ { opacity: 0, y: 10 }}
+            animate={ { opacity: 1, y: 0 }}
+            className="lg:col-span-1"
+            >
+            <div className="h-full p-8 bg-[#0A0A0A] border border-white/10 rounded-sm flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-zinc-500">
+                    Source Verification
+                  </span>
+                </div>
 
-      <h2 className="text-xl font-medium text-white mb-4">
-        Performance Analysis & Stock Symbol Deep-Dive
-      </h2>
+                <h2 className="text-xl font-medium text-white mb-4">
+                  Performance Analysis & Stock Symbol Deep-Dive
+                </h2>
 
-      <p className="text-sm text-zinc-400 font-light leading-relaxed mb-6">
-        This technical dossier provides the underlying analysis for the 
-        <span className="text-white font-medium"> Inversiones Atlántida (BCSA5185816) </span> 
-        performance data. It details the 2025 refinancing crisis, the 53.45% yield volatility, 
-        and the final 100% principal recovery on March 30, 2026.
-      </p>
-    </div>
+                <p className="text-sm text-zinc-400 font-light leading-relaxed mb-6">
+                  This technical dossier provides the underlying analysis for the
+                  <span className="text-white font-medium"> Inversiones Atlántida (BCSA5185816) </span>
+                  performance data. It details the 2025 refinancing crisis, the 53.45% yield volatility,
+                  and the final 100% principal recovery on March 30, 2026.
+                </p>
+              </div>
 
-    <a 
-      href="https://docs.google.com/document/d/1qU0ccdu5c2MPzP0jeZd5KaJvZNwIe05C-lUOTw6XZY8/edit?usp=drivesdk" 
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-3 w-full py-4 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-zinc-200 transition-colors"
-    >
-      View Full Analysis
-      <ArrowUpRight className="w-4 h-4" />
-    </a>
-  </div>
-</motion.div>
+              <a
+                href="https://docs.google.com/document/d/1qU0ccdu5c2MPzP0jeZd5KaJvZNwIe05C-lUOTw6XZY8/edit?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 w-full py-4 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-zinc-200 transition-colors"
+                >
+                View Full Analysis
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+          </MotionDiv>
 
 
           {/* RISK PANEL */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-          >
+          <MotionDiv
+            initial={ { opacity: 0, x: 20 }}
+            animate={ { opacity: 1, x: 0 }}
+            transition={ { delay: 0.4 }}
+            >
             <RiskPanel />
-          </motion.div>
+          </MotionDiv>
         </div>
 
         {/* ================= TRANSACTIONS ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
+        <MotionDiv
+          initial={ { opacity: 0, y: 20 }}
+          animate={ { opacity: 1, y: 0 }}
+          transition={ { delay: 0.6 }}
+          >
           <TechnicalDossier />
-        </motion.div>
+        </MotionDiv>
 
       </div>
     </main>

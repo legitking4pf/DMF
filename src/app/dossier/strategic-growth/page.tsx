@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react'; // Fixed import
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
+import { DynamicMotionMain as MotionMain, DynamicMotionDiv as MotionDiv } from '@/components/motion/DynamicMotion';
 
 // Standard Imports
 import ExecutiveDoctrine from "@/components/ExecutiveDoctrine";
@@ -22,7 +22,7 @@ export default function CAODossier() {
   }, []);
 
   return (
-    <motion.main 
+    <MotionMain 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -46,7 +46,7 @@ export default function CAODossier() {
       {/* Strategic Growth Pillars */}
       <section className="grid grid-cols-1 gap-24">
         {doctrines.map((d, index) => (
-          <motion.div
+          <MotionDiv
             key={d.title}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -54,7 +54,7 @@ export default function CAODossier() {
             transition={{ delay: index * 0.1 }}
           >
            <ExecutiveDoctrine {...d} />
-          </motion.div>
+          </MotionDiv>
         ))}
       </section>
 
@@ -116,6 +116,6 @@ export default function CAODossier() {
           </div>
         </div>
       </footer>
-    </motion.main>
+    </MotionMain>
   );
 }

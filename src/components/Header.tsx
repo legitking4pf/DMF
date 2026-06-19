@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, useScroll, useTransform, motion } from "framer-motion";
+import { DynamicMotionDiv as MotionDiv } from '@/components/motion/DynamicMotion';
 import { Fingerprint, Globe, X, Menu } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -28,17 +29,12 @@ export default function RefinedHeader() {
   
   // Disable body scroll when menu is open
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = open ? "hidden" : "unset";
   }, [open]);
 
-useEffect(() => {
-  // Set the initial height variable
-  document.documentElement.style.setProperty('--header-height', '96px');
-}, []);
+  useEffect(() => {
+    document.documentElement.style.setProperty('--header-height', '96px');
+  }, []);
 
   // ESC key listener
   useEffect(() => {
@@ -63,7 +59,7 @@ useEffect(() => {
             <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold select-none text-sm">
               DMF
             </div>
-            <div className="leading-tight  sm:block">
+            <div className="leading-tight sm:block">
               <div className="text-sm tracking-widest text-white font-medium">
                 MORO <span className="text-gold-light">F.</span>
               </div>
@@ -111,10 +107,10 @@ useEffect(() => {
         </div>
       </motion.header>
 
-      {/* --- MOBILE OVERLAY (z-[60] to cover header) --- */}
+      {/* --- MOBILE OVERLAY (z-[60]) --- */}
       <AnimatePresence>
         {open && (
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -123,24 +119,14 @@ useEffect(() => {
           >
             <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-8 h-full flex flex-col">
               
-              {/* OVERLAY HEADER */}
               <div className="flex items-center justify-between mb-8">
-                {/* Brand in Overlay */}
                 <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold text-sm">
-                    DMF
-                  </div>
+                  <div className="w-11 h-11 rounded-full bg-[#FFFFFF] text-black flex items-center justify-center font-bold text-sm">DMF</div>
                   <div className="leading-tight">
-                    <div className="text-sm tracking-widest text-white font-medium">
-                      MORO <span className="text-gold-light">F.</span>
-                    </div>
-                    <div className="text-[9px] uppercase tracking-wider text-white/40">
-                      Menu Active
-                    </div>
+                    <div className="text-sm tracking-widest text-white font-medium">MORO <span className="text-gold-light">F.</span></div>
+                    <div className="text-[9px] uppercase tracking-wider text-white/40">Menu Active</div>
                   </div>
                 </div>
-
-                {/* Close Button */}
                 <button
                   onClick={() => setOpen(false)}
                   className="w-11 h-11 rounded-full border border-white/10 hover:bg-white/10 flex items-center justify-center transition-colors"
@@ -149,7 +135,6 @@ useEffect(() => {
                 </button>
               </div>
 
-              {/* NAV LINKS (Top Aligned) */}
               <nav className="flex flex-col gap-6 mt-12 px-2">
                 {NAV_ITEMS.map((item, idx) => (
                   <motion.a
@@ -169,16 +154,14 @@ useEffect(() => {
                 ))}
               </nav>
 
-              {/* FOOTER (Simple, no buttons) */}
               <div className="mt-auto pt-8 border-t border-white/[0.05] flex items-center gap-3">
                 <Globe size={14} className="text-gold-light" />
                 <span className="text-[10px] uppercase tracking-widest text-gold-light">
                   Honduras · Spain · Guatemala
                 </span>
               </div>
-              
             </div>
-          </motion.div>
+          </MotionDiv>
         )}
       </AnimatePresence>
     </>

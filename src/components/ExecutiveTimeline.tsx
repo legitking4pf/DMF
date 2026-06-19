@@ -1,6 +1,8 @@
 // /src/components/ExecutiveTimeline.tsx
 'use client'
-import { motion } from "framer-motion";
+import {
+  DynamicMotionDiv as MotionDiv
+} from '@/components/motion/DynamicMotion';
 import { timeline } from "@/data/timeline";
 
 export default function ExecutiveTimeline() {
@@ -10,7 +12,7 @@ export default function ExecutiveTimeline() {
 
       <div className="space-y-6">
         {timeline.map((item, i) => (
-          <motion.div
+          <MotionDiv
             key={i}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -21,7 +23,7 @@ export default function ExecutiveTimeline() {
             <p className="text-sm text-neutral-400">{item.year}</p>
             <p className="font-medium">{item.title}</p>
             <p className="text-neutral-300 text-sm">{item.description}</p>
-          </motion.div>
+          </MotionDiv>
         ))}
       </div>
     </section>

@@ -3,6 +3,9 @@ import React from 'react';
 import {
   motion
 } from 'framer-motion';
+import { DynamicMotionDiv as MotionDiv } from '@/components/motion/DynamicMotion';
+
+// USE
 import {
   Camera
 } from 'lucide-react';
@@ -135,7 +138,7 @@ export default function ExecutiveGallery() {
         {/* The Grid */}
         <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[150px] md:auto-rows-[180px] grid-flow-dense gap-2 md:gap-1.5 overflow-hidden">
           {galleryData.map((item, idx) => (
-            <motion.div
+            <MotionDiv
               key={item.id}
               initial={ { opacity: 0, scale: 0.95 }}
               whileInView={ { opacity: 1, scale: 1 }}
@@ -158,7 +161,7 @@ export default function ExecutiveGallery() {
                   Ref: {item.id.toString().padStart(2, '0')}
                 </span>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </div>
