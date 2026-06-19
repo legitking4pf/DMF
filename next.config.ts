@@ -27,12 +27,10 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  turbopack: {
-    minify: true,
-  },
+  turbopack: {},
   compiler: {
     removeConsole: {
-      exclude: ['error'], // Keep console.error for monitoring
+      exclude: ['error', 'warn'], // Keep console.error for monitoring
     },
   },
   experimental: {
