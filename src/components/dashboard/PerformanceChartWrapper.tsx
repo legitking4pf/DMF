@@ -6,13 +6,13 @@ const PerformanceChart = dynamic(
   {
     ssr: false, // Prevents hydration errors with ResponsiveContainer
     loading: () => (
-      <div className="w-full h-[500px] flex items-center justify-center bg-[#050505] text-white/20 font-mono border border-white/5 rounded-lg">
+      <div className="w-full h-[500px] flex items-center justify-center bg-[#050505] text-white/20 font-mono border-white/5 rounded-lg">
         INITIALIZING ANALYTICS ENGINE...
       </div>
     ),
   }
 );
 
-export function PerformanceChartWrapper() {
+export default function PerformanceChartWrapper() {
   return <PerformanceChart />;
 }
