@@ -35,15 +35,15 @@ const nextConfig: NextConfig = {
 
   reactStrictMode: true,
 
-  // Force Terser + kill dead code
-  swcMinify: false,
+  // Force Terser + kill dead code - swcMinify removed in Next 16
   webpack: (config, { dev, isServer }) => {
     if (!dev &&!isServer) {
       config.optimization.minimizer[0].options.terserOptions = {
         compress: {
           passes: 2,
           toplevel: true,
-          pure_funcs: ['console.log'],
+          drop_console: true,
+          drop_debugger: true,
         },
         mangle: {
           toplevel: true,
@@ -65,7 +65,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.bancatlan.hn' },
       { protocol: 'https', hostname: '**.website-files.com' },
       { protocol: 'https', hostname: '**.invatlan.hn' },
-      { protocol: 'https://**.transparenttextures.com' },
+      { protocol: 'https', hostname: '**.transparenttextures.com' }, // <- fixed syntax
     ],
   },
 }
