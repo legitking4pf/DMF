@@ -28,14 +28,34 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  
+
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
-  
+
   reactStrictMode: true,
-  // swcMinify: true,  DELETE THIS LINE
-  
+
+  // Force Terser + kill dead code
+  swcMinify: false,
+  webpack: (config, { dev, isServer }) => {
+    if (!dev &&!isServer) {
+      config.optimization.minimizer[0].options.terserOptions = {
+        compress: {
+          passes: 2,
+          toplevel: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          toplevel: true,
+        },
+        format: {
+          comments: false,
+        },
+      }
+    }
+    return config
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
@@ -45,7 +65,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.bancatlan.hn' },
       { protocol: 'https', hostname: '**.website-files.com' },
       { protocol: 'https', hostname: '**.invatlan.hn' },
-      { protocol: 'https', hostname: '**.transparenttextures.com' },
+      { protocol: 'https://**.transparenttextures.com' },
     ],
   },
 }
