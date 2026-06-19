@@ -10,7 +10,6 @@ const permissionsPolicy = "geolocation=(), camera=(), microphone=(), payment=(),
 const crossOriginOpenerPolicy = 'same-origin'
 const crossOriginEmbedderPolicy = 'unsafe-none'
 const xFrameOptions = 'DENY'
-
 const nextConfig: NextConfig = {
   async headers() {
     return [
@@ -28,34 +27,18 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-
+  turbopack: {
+    minify: true,
+  },
+  compiler: {
+    removeConsole: {
+      exclude: ['error'], // Keep console.error for monitoring
+    },
+  },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'lodash'],
   },
-
   reactStrictMode: true,
-
-  // Force Terser + kill dead code - swcMinify removed in Next 16
-  webpack: (config, { dev, isServer }) => {
-    if (!dev &&!isServer) {
-      config.optimization.minimizer[0].options.terserOptions = {
-        compress: {
-          passes: 2,
-          toplevel: true,
-          drop_console: true,
-          drop_debugger: true,
-        },
-        mangle: {
-          toplevel: true,
-        },
-        format: {
-          comments: false,
-        },
-      }
-    }
-    return config
-  },
-
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
@@ -65,9 +48,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.bancatlan.hn' },
       { protocol: 'https', hostname: '**.website-files.com' },
       { protocol: 'https', hostname: '**.invatlan.hn' },
-      { protocol: 'https', hostname: '**.transparenttextures.com' }, // <- fixed syntax
+      { protocol: 'https', hostname: '**.transparenttextures.com' },
     ],
   },
 }
-
 export default nextConfig
