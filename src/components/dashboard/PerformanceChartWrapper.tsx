@@ -13,6 +13,6 @@ const PerformanceChart = dynamic(
   }
 );
 
-export default function PerformanceChartWrapper() {
+export function PerformanceChartWrapper() {
   return <PerformanceChart />;
 }
