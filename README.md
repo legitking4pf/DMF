@@ -55,4 +55,4 @@ A high-performance web application designed to reflect the **Strategic Portfolio
 ---
 
 ## 🛡 License
-**Private & Confidential.** Developed by **(Banco Atlántida)** for Author David Moro Fernandez. All rights reserved.
+**Private & Confidential.** Developed by **(Legit Creations)** for Author David Moro Fernandez. All rights reserved.
