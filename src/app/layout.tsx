@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Head from "next/head"; // <- add this
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Head>
       <body className="antialiased bg-obsidian text-bone selection:bg-gold/30">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
