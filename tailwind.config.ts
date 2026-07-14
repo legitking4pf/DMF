@@ -22,6 +22,7 @@ const config: Config = {
         },
         obsidian: '#050505',
         bone: '#FDFBF7',
+        ash: '#575757',
       },
       fontFamily: {
         body: ["Inter",

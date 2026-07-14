@@ -2,12 +2,11 @@
   "identity": {
     "name": "David Moro Fernandez",
     "short_name": "DMF",
-    "site_name": "DMF Institutional",
-    "organizations": [
-      {
-        "company": "Grupo Financiero Atlántida",
-        "url": "https://grupofinancieroatlantida.com"
-      },
+    "site_name": "David Moro,
+    "organizations": [{
+      "company": "Grupo Financiero Atlántida",
+      "url": "https://grupofinancieroatlantida.com"
+    },
       {
         "company": "Banco Atlántida Honduras",
         "url": "https://bancatlan.hn"
@@ -15,60 +14,57 @@
       {
         "company": "Telefonica Empresas",
         "url": "https://www.telefonicaempresas.es/"
-      }
-    ],
-    "roles": [
-      {
-        "Chief Administrative Officer": "Grupo Financiero Atlántida"
-      },
+      }],
+    "roles": [{
+      "Chief Administrative Officer": "Grupo Financiero Atlántida"
+    },
       {
         "Chief Technology Officer": "Banco Atlántida Honduras"
       },
       {
         "Head, Service Platforms & Voice Core Network": "Telefonica Empresas"
-      }
-    ]
+      }]
   },
   "description": "Chief Technology Officer at Banco Atlántida Honduras. Governing Member - Advisory Board at Grupo Financiero Atlántida.",
   "seo": {
-    "display_title": "David Moro Fernandez",
+    "display_title": "David Moro Fernandez | CAO Grupo Financiero Atlántida",
     "keywords": [
       "David Moro Fernandez",
-      "CAO Grupo Financiero Atlántida",
-      "banco Atlantida",
-      "inversiones Atlantida",
-      "South America",
-      "seguros Atlantida",
-      "bank investment",
-      "entrepreneurship",
-      "Telefonica",
-      "Telefonica David moro",
-      "Telefonica empresas",
-      "communidad de madrid",
-      "madrid",
-      "Young Spanish Entreprenuers",
-      " European Business men",
-      "central america",
-      "atlantis bank",
-      "Atlantida board",
-      "Advisory board",
-      "Spanish",
-      "Honduras",
-      "El salvador",
-      "Grupo financiero Atlantida",
-      "gfa",
-      "CTO",
-      "Banco Atlántida",
+      "David Moro",
+      "DMF",
+      "CAO Grupo Financiero Atlantida",
+      "GFA",
+      "Banco Atlantida",
+      "Banco Atlantida Honduras",
+      "Grupo Financiero Atlantida",
+      "Chief Administrative Officer",
+      "Digital Banking Executive, Fintech Leader",
+      "Core Banking Migration",
       "Digital Sovereignty",
-      "Fintech Core Migration",
-      "KONCEPTO Décor Founder",
-      "GFA Strategic Vision 2030",
-      "Wealth Acceleration Opportunity"
-    ],
-    "canonical_url": "https://davidmoro.vercel.app",
-    "robots": "index, follow"
-  },
-    "social": {
+      "Bank Digital Transformation",
+      "Banking Honduras",
+      "Banking El Salvador",
+      "Central America Financial Services",
+      "Investment Banking Central America",
+      "Spanish Business Leader",
+      "Spanish Entrepreneur",
+      "Madrid Business Executive",
+      "European Business Latin America",
+      "Advisory Board Member",
+      "Wealth Management",
+      "Wealth Acceleration",
+      "Bank Strategy 2030",
+      "GFA Strategic Vision",
+      "KONCEPTO Decor Founder",
+      "Telefonica Empresas",
+      "Young Entrepreneurs Spain",
+      "Fintech Investment",
+      "Bank Modernization",
+      "Financial Inclusion",
+      "Entrepreneurship LATAM"
+    ]
+  }
+  "social": {
     "og_title": "David Moro Fernandez",
     "og_type": "website",
     "og_image": ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"]

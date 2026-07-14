@@ -23,12 +23,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: {
-    default: "David Moro Fernandez",
-    template: "%s | David Moro Fernandez",
-  },
-  description: "Chief Technology Officer at Banco Atlántida Honduras...",
   metadataBase: new URL("https://davidmoro.vercel.app"),
+  title: {
+    default: "David Moro Fernandez | CAO Grupo Financiero Atlantida",
+    template: "%s | David Moro",
+  },
+  description: "CAO at GFA. Leader in Digital Banking, Core Migration & Wealth Acceleration in Honduras and El Salvador.",
+  keywords: ["David Moro Fernandez", "GFA", "Digital Banking", "Central America"],
   alternates: { canonical: "/" },
   robots: {
     index: true,
@@ -45,14 +46,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://davidmoro.vercel.app",
-    siteName: "David Moro Fernandez",
+    siteName: "David Moro",
     title: "David Moro Fernandez",
     description: "Chief Technology Officer at Banco Atlántida Honduras...",
     images: ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "David Moro Fernandez | CAO & CTO",
+    title: "David Moro Fernandez",
     description: "Chief Technology Officer at Banco Atlántida Honduras...",
     images: ["https://hv4w1qmfjrk8zaij.public.blob.vercel-storage.com/xxxxxxxxxxxx"],
   },
