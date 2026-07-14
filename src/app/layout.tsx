@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     default: "David Moro Fernandez | CAO Grupo Financiero Atlantida",
     template: "%s | David Moro",
   },
+  
   description: "CAO at GFA. Leader in Digital Banking, Core Migration & Wealth Acceleration in Honduras and El Salvador.",
   keywords: ["David Moro Fernandez", "GFA", "Digital Banking", "Central America"],
   alternates: { canonical: "/" },
